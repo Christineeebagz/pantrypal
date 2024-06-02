@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca.ttf");
+  }
+  
+  .PantryPalName {
+    position: absolute;
+    width: 248px;
+    height: 38px;
+    left: 55px;
+    top: 66px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #ff9914;
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+    text-decoration: none;
+  }
+  
+  #signout {
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    left: 1215px;
+    top: 71px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+    text-decoration: none;
+  
+    background-color: transparent;
+    outline: none;
+    color: #08bdbd;
+    border: 0px;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  .sidebar {
+    position: absolute;
+    width: 265px;
+    height: 796px;
+    left: 55px;
+    top: 137px;
+  
+    border-radius: 35px;
+  }
+  
+  .img {
+    position: absolute;
+    width: 1025px;
+    height: 405px;
+    left: 340px;
+    top: 142px;
+  
+    background: linear-gradient(127.03deg, #08bdbd 29.89%, #045757 166.38%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+  }
+  
+  imgbg {
+    width: 100%;
+    height: auto;
+  }
+  
+  .mainbuttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+  
+    position: absolute;
+    width: 1025px;
+    height: 310px;
+    left: 340px;
+    top: 587px;
+  }
+  
+  .addmeal {
+    position: absolute;
+    width: 500px;
+    height: 310px;
+    left: 525px;
+    top: 0px;
+  
+    background: #29bf12;
+    border-radius: 35px;
+  }
+  
+  .addlist {
+    position: absolute;
+    width: 500px;
+    height: 310px;
+    left: 0px;
+    top: 0px;
+  
+    background: #08bdbd;
+    border-radius: 35px;
+  }
+  
+  .plusicon {
+    position: absolute;
+    width: 99.99px;
+    height: 100.32px;
+    left: 200px;
+    top: 105px;
+  }
+  
+  .addlabel {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 153.39px;
+    top: 236.72px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    /* identical to box height */
+    text-align: center;
+  
+    color: #045757;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  .nav {
+    position: absolute;
+    width: 218px;
+    height: 39.22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    left: 23px;
+    right: 9.06%;
+    top: 47.11%;
+    bottom: 47.96%;
+  
+    background: white;
+    border-radius: 20px;
+  }
+  
+  .nav:hover{
+      background-color: #29BF12;
+  }
+  
+  .nav:hover img{ 
+      filter: brightness(300%);
+  }
+  
+  .nav:hover div{
+      color: white;
+  }
+  
+  .line1, .line2{
+      position: absolute;
+      width: 219px;
+      height: 0px;
+      left: 23px;
+      top: 605px;
+      border: 1px solid rgba(102, 95, 76, 0.5);
+  }
+  
+  .line1{
+      top: 322px;
+  }
+  
+  .icons {
+    position: absolute;
+    width: 17.92px;
+    left: 21.91px;
+    top: 10.06px;
+    filter: brightness(100%);
+  }
+  
+  .navlabel {
+    position: absolute;
+    left: 30.09%;
+    top: 10.06px;
+    bottom: 49.16%;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  
+    color: #aca89e;
+    mix-blend-mode: normal;
+  }
+  
+  
+  .homelabel{
+      position: absolute;
+    left: 30.09%;
+    top: 10.06px;
+    bottom: 49.16%;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  
+    color: white;
+    mix-blend-mode: normal;
+  }
+  
+  #home {
+    top: 375px;
+    background-color: #F21B3F;
+  }
+  
+  #meals {
+    top: 444.39px;
+  }
+  
+  #grocerylist {
+    top: 513.78px;
+  }
+  
+  #settings {
+    top: 658px;
+  }
+  
+  #about {
+    top: 704px;
+  }
+  
+  .bell{
+      position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 23px;
+  top: 29px;
+  }
+  
+  .msg{
+      position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 208px;
+  top: 29px;
+  }
+  
+  .dp{
+      position: absolute;
+  width: 121px;
+  height: 122.6px;
+  left: 72px;
+  top: 93px;
+  }
+  
+  #name{
+      position: absolute;
+  width: 265px;
+  height: 50px;
+  left: 0px;
+  top: 230px;
+  
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  
+  color: #FF9914;
+  
+  text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }

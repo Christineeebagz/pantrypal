@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-  origin: "http://localhost:5174", // Replace with your React app's origin
+  origin: "http://localhost:5173", // Replace with your React app's origin
   credentials: true, // Change to 'true' if needed for cookies
   optionSuccessStatus: 200, // some legacy browsers require this
 };
@@ -18,7 +18,7 @@ const db = mysql.createConnection({
   user: "root",
   password: "",
   database: "pantrypal",
-  port: 3308,
+  port: 3306,
 });
 
 db.connect((err) => {
@@ -30,7 +30,6 @@ db.connect((err) => {
 });
 
 app.post("/signup", (req, res) => {
-  console.log("reached here");
   const sql =
     "INSERT INTO `user information` (`username`, `firstName`, `lastName`, `email`, `password`) VALUES (?)";
   const values = [
@@ -43,10 +42,53 @@ app.post("/signup", (req, res) => {
 
   db.query(sql, [values], (err, result) => {
     if (err) {
-      return res.json("Error");
+      console.error("Signup query error:", err);
+      return res.status(500).json("Error");
     }
-    const userId = result.insertId; // Get the id_no of the inserted user
+
+    // Get the id_no of the inserted user
+    const userId = result.insertId;
+
+    // Return the full user data, including id_no
     res.json({ ...req.body, id_no: userId });
+  });
+});
+
+
+app.post("/signin", (req, res) => {
+  const { email, password } = req.body;
+  const sql = "SELECT * FROM `user information` WHERE `email` = ? AND `password` = ?";
+
+  db.query(sql, [email, password], (err, data) => {
+    if (err) {
+      console.error("Database query error:", err);
+      return res.status(500).json({ message: "Error" });
+    }
+    if (data.length > 0) {
+      const user = data[0]; // Get the first matching user
+      return res.status(200).json({ ...user, message: "Success" });
+    } else {
+      return res.status(401).json({ message: "Failed" });
+    }
+  });
+});
+
+
+
+app.post("/api/check-unique", (req, res) => {
+  const { field, value } = req.body;
+  const sql = `SELECT * FROM \`user information\` WHERE \`${field}\` = ?`;
+
+  db.query(sql, [value], (err, data) => {
+    if (err) {
+      console.error("Database query error:", err);
+      return res.status(500).json({ exists: false });
+    }
+    if (data.length > 0) {
+      return res.status(200).json({ exists: true });
+    } else {
+      return res.status(200).json({ exists: false });
+    }
   });
 });
 

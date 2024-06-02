@@ -7,10 +7,11 @@ const Home = () => {
   const location = useLocation();
   const { user } = location.state || {};
 
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState(user ? user.id_no : null);
 
   useEffect(() => {
-    if (user && user.username) {
+    if (user && user.username && !userId) {
+      console.log("User data received in Home:", user);
       handleGetID();
     }
   }, [user]);

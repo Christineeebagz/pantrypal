@@ -1,18 +1,29 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import "./Styling/Welcome.css"
 
 const Welcome = () => {
   const navigate = useNavigate();
 
-  const handleSignUpClick = () => {
+  const handleSignInClick = () => {
     navigate("/signin");
   };
 
   return (
-    <div>
-      Welcome Page Hello new new
-      <button onClick={handleSignUpClick}>Sign In</button>
-    </div>
+    <>
+      <Helmet>
+        <title>PantryPal</title>
+        <link rel="icon" href="graphics/diet.png" type="image/x-icon" />
+        <link rel="stylesheet" href="welcome.css" />
+      </Helmet>
+      <div className="maincontainer">
+        <div className="message">Create your grocery list with PantryPal.</div>
+        <button onClick={handleSignInClick} className="getstartedbutton">
+          GET STARTED!
+        </button>
+      </div>
+    </>
   );
 };
 
