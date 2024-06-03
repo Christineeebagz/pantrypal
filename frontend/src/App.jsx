@@ -6,6 +6,8 @@ import Signin from "./components/Signin";
 import Home from "./components/Home";
 import CreateList from "./components/CreateList";
 import GroceryList from "./components/GroceryList";
+import CreateMeal from "./components/CreateMeal";
+import Meals from "./components/Meals";
 
 const App = () => {
   return (
@@ -17,6 +19,10 @@ const App = () => {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/createlist" element={<CreateList />}></Route>
         <Route path="/grocerylist" element={<GroceryList />}></Route>
+        <Route path="/createmeal" element={<CreateMeal />}></Route>
+        <Route path="/meals" element={<Meals />}></Route>
+        
+
       </Routes>
     </BrowserRouter>
   );
