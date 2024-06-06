@@ -105,6 +105,22 @@ app.get("/getmeals", (req, res) => {
   });
 });
 
+app.post("/getingredients", (req, res) => {
+  const { meal_ID_list } = req.body;
+  const sql = `SELECT ingred_id, ingredient_name, quantity, unit FROM \`customer ingredients\` WHERE meal_id IN (?)`;
+  db.query(sql, [meal_ID_list], (err, result) => {
+    if (err) {
+      console.error("Database query error:", err);
+      return res.status(500).json("Error");
+    }
+    if (result.length > 0) {
+      res.json(result);
+    } else {
+      res.status(404).json("Ingredients not found");
+    }
+  });
+});
+
 app.listen(8070, () => {
   console.log("Server is running on port 8070");
 });

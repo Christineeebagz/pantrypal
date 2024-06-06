@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import "./Styling/choosemeals.css";
 import "./Styling/navbar.css";
 import backArrow from "./Styling/graphics/meals_back-arrow.png";
+import logo from "./Styling/graphics/logo.png";
 
 const NavBar = () => {
   return (
@@ -15,7 +16,8 @@ const NavBar = () => {
         <title>PantryPal - Create A List</title>
         <link
           rel="icon"
-          href="./Styling/graphics/logo.png"
+          //   href="./Styling/graphics/logo.png"
+          src={logo}
           type="image/x-icon"
         />
       </Helmet>
