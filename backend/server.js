@@ -153,7 +153,7 @@ app.get("/getmeals", (req, res) => {
   db.query(sql, [id_no], (err, result) => {
     if (err) {
       console.error("Database query error:", err);
-      return res.status(500).json("Error");
+      return res.status(500).json("Error from get meals");
     }
     if (result.length > 0) {
       result.forEach((meal) => {});
@@ -171,7 +171,7 @@ app.get("/getingredients", (req, res) => {
   db.query(sql, [meal_id], (err, result) => {
     if (err) {
       console.error("Database query error:", err);
-      return res.status(500).json("Error");
+      return res.status(500).json("Error from getingredients");
     }
     if (result.length > 0) {
       console.log("Ingredients found for meal_id:", meal_id);
@@ -194,7 +194,7 @@ app.get("/getmealId", (req, res) => {
   db.query(sql, [id_no, meal_name], (err, result) => {
     if (err) {
       console.error("Database query error:", err);
-      return res.status(500).json("Error");
+      return res.status(500).json("Error from getmealID");
     }
     if (result.length > 0) {
       console.log("Inside getidmeal:", id_no, "and meal_name:", meal_name);
@@ -242,7 +242,7 @@ app.post("/insertIngredient", (req, res) => {
 
       db.query(insertSql, insertValues, (err, result) => {
         if (err) {
-          return res.json("Error");
+          return res.json("Error instertIngredients");
         }
         const ingredId = result.insertId; // Get the id_no of the inserted user
         console.log("Ingredient inserted with id_no:", ingredId);
@@ -262,7 +262,7 @@ app.post("/insertMeal", (req, res) => {
     [mealName, idNo],
     (err, results) => {
       if (err) {
-        return res.json("Error");
+        return res.json("Error insertMeal");
       }
 
       // If the meal already exists, return an error
@@ -277,7 +277,7 @@ app.post("/insertMeal", (req, res) => {
 
       db.query(sql, values, (err, result) => {
         if (err) {
-          return res.json("Error");
+          return res.json("Error insertMeal2");
         }
         const mealId = result.insertId; // Get the id_no of the inserted meal
         console.log("Meal inserted with id_no:", mealId);
@@ -364,7 +364,7 @@ app.post("/updateIngredient", (req, res) => {
   db.query(sql, [ingredient_name, quantity, unit, ingred_id], (err, result) => {
     if (err) {
       console.error("Database query error:", err);
-      return res.status(500).json("Error");
+      return res.status(500).json("Error updateIngredients");
     }
     if (result.affectedRows > 0) {
       console.log("Ingredient updated successfully:", ingredient_name);
@@ -390,7 +390,7 @@ app.post("/updateMealName", (req, res) => {
     (err, duplicateResult) => {
       if (err) {
         console.error("Database query error:", err);
-        return res.status(500).json("Error");
+        return res.status(500).json("Error mealName");
       }
 
       // If a meal with the same name already exists, return an error
@@ -405,7 +405,7 @@ app.post("/updateMealName", (req, res) => {
       db.query(updateSql, [meal_name, meal_id, id_no], (err, result) => {
         if (err) {
           console.error("Database query error:", err);
-          return res.status(500).json("Error");
+          return res.status(500).json("Error updateMealName 2");
         }
         if (result.affectedRows > 0) {
           console.log("Meal name updated successfully:", meal_id);

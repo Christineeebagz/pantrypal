@@ -810,8 +810,6 @@ const Meals = () => {
         <div className="addmeal" onClick={handleCreateMeal}>
           <img src={meals} alt="Add Meal" />
         </div>
-        {/* Blank meal */}
-        <Meal key="blank" id="blank" name="" viewMealHandler={() => {}} />
         {/* Render existing meals */}
         {mealNames.map((meal) => (
           <Meal

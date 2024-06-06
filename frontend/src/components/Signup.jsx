@@ -39,7 +39,7 @@ const Signup = () => {
       axios
         .post("http://localhost:8070/signup", values)
         .then((res) => {
-          navigate("/home", { state: { user: values } });
+          navigate("/home", { state: { user: res.data } });
         })
         .catch((err) => console.log(err));
     }
