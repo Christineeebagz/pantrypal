@@ -33,10 +33,6 @@ const Meals = () => {
   });
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
-  }, []);
-
-  useEffect(() => {
     if (user && user.id_no) {
       axios
         .get(`http://localhost:8070/getmeals?id_no=${user.id_no}`)
