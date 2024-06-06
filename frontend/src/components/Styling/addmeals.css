@@ -1,0 +1,706 @@
+.ADD-NEW-MEAL {
+    background-color: #f3f3f1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .ADD-NEW-MEAL .div {
+    background-color: #f3f3f1;
+    width: 1420px;
+    height: 952px;
+    position: relative;
+  }
+  
+  .ADD-NEW-MEAL .pantrypal-logo {
+    position: absolute;
+    width: 248px;
+    top: 46px;
+    left: 563px;
+    text-shadow: 0px 2px 4px #29442b40;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 700;
+    color: #ff9914;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .ADD-NEW-MEAL .overlap {
+    position: absolute;
+    width: 1310px;
+    height: 735px;
+    top: 187px;
+    left: 32px;
+  }
+  
+  .ADD-NEW-MEAL .meals-frame {
+    position: absolute;
+    width: 1310px;
+    height: 692px;
+    top: 43px;
+    left: 0;
+    background-color: #eaeaea;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: inset 0px 4px 24px #00000040;
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.25%;
+    overflow: scroll;
+  }
+  
+  .ADD-NEW-MEAL .add-ingredient {
+    position: absolute;
+    width: 1036px;
+    height: 76px;
+    top: 800px;
+    left: 185px;
+    background-color: #c7c7c7;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 3px #655e4c80;
+  }
+  
+  .ADD-NEW-MEAL .add-ingredient:hover {
+    background-color: #ff9914;
+  }
+  .ADD-NEW-MEAL .pluss-symbol {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 495px;
+  }
+  
+  .ADD-NEW-MEAL .overlap-group {
+    position: absolute;
+    width: 1044px;
+    height: 40px;
+    top: 256px;
+    left: 185px;
+  }
+  
+  .ADD-NEW-MEAL .img {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 10px;
+    left: 691px;
+  }
+  
+  .ADD-NEW-MEAL .pluss-symbol-2 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 10px;
+    left: 993px;
+  }
+  
+  .ADD-NEW-MEAL .pluss-symbol-3 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 10px;
+    left: 807px;
+  }
+  
+  .ADD-NEW-MEAL .group {
+    position: absolute;
+    width: 1044px;
+    height: 40px;
+    top: 0;
+    left: 0;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper {
+    position: absolute;
+    width: 76px;
+    top: 0;
+    left: 0;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #aca89e;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 37.5px;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-2 {
+    position: absolute;
+    width: 556px;
+    top: 0;
+    left: 96px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #29bf12;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 37.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-3 {
+    top: 2px;
+    position: absolute;
+    width: 172px;
+    left: 672px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #aca89e;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 37.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-4 {
+    position: absolute;
+    width: 172px;
+    top: 0;
+    left: 864px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #aca89e;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 37.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .overlap-2 {
+    position: absolute;
+    width: 1044px;
+    height: 38px;
+    top: 328px;
+    left: 185px;
+  }
+  
+  .ADD-NEW-MEAL .pluss-symbol-4 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 8px;
+    left: 993px;
+  }
+  
+  .ADD-NEW-MEAL .pluss-symbol-5 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 8px;
+    left: 691px;
+  }
+  
+  .ADD-NEW-MEAL .pluss-symbol-6 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 8px;
+    left: 807px;
+  }
+  
+  .ADD-NEW-MEAL .group-2 {
+    position: absolute;
+    width: 1044px;
+    height: 38px;
+    top: 0;
+    left: 0;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-5 {
+    position: absolute;
+    width: 556px;
+    top: 0;
+    left: 92px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #29bf12;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 37.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-6 {
+    top: 0;
+    position: absolute;
+    width: 172px;
+    left: 672px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #aca89e;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 37.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .overlap-3 {
+    position: absolute;
+    width: 1044px;
+    height: 40px;
+    top: 398px;
+    left: 185px;
+  }
+  
+  
+  .ADD-NEW-MEAL .text-wrapper-8 {
+    position: absolute;
+    width: 556px;
+    top: 162px;
+    left: 190px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #29bf12;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .ADD-NEW-MEAL .text-wrapper-9 {
+  /* quantity */
+  
+  position: absolute;
+  width: 172px;
+  height: 45px;
+  left: 771px;
+  top: 163px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  /* identical to box height, or 45px */
+  text-align: center;
+  
+  color: #ACA89E;
+  }
+  
+  
+  .ADD-NEW-MEAL .text-wrapper-10 {
+  /* unit */
+  
+  position: absolute;
+  width: 122px;
+  height: 45px;
+  left: 966px;
+  top: 163px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  /* identical to box height, or 45px */
+  text-align: center;
+  
+  color: #ACA89E;
+  
+  
+  }
+  
+  .ADD-NEW-MEAL .line {
+    top: 239px;
+    position: absolute;
+    width: 1036px;
+    height: 1px;
+    left: 185px;
+    object-fit: cover;
+  }
+  
+  .ADD-NEW-MEAL .line-2 {
+    top: 311px;
+    position: absolute;
+    width: 1036px;
+    height: 1px;
+    left: 185px;
+    object-fit: cover;
+  }
+  
+  .ADD-NEW-MEAL .line-3 {
+    top: 381px;
+    position: absolute;
+    width: 1036px;
+    height: 1px;
+    left: 185px;
+    object-fit: cover;
+  }
+  
+  .ADD-NEW-MEAL .line-4 {
+    top: 453px;
+    position: absolute;
+    width: 1036px;
+    height: 1px;
+    left: 185px;
+    object-fit: cover;
+  }
+  
+  .ADD-NEW-MEAL .meal-title {
+    position: absolute;
+    width: 550px;
+    height: 116px;
+    top: 0;
+    left: 118px;
+    background-color: #29bf12;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 3px #655e4c80;
+  }
+  
+  .ADD-NEW-MEAL .meal-title-text {
+    position: absolute;
+    width: 248px;
+    top: 38px;
+    left: 116px;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 700; 
+    color: #f3f3f1;
+    font-size: 28.5px;
+    letter-spacing: 0;
+    line-height: normal;
+    background-color: transparent; /* Make the input background transparent */
+    border: none; /* Remove borders */
+    outline: none; /* Remove focus outline */
+    padding: 0; /* Remove default padding */
+  
+  }
+  
+  .meal-title .text-wrapper-11::placeholder {
+    color:  #f3f3f1;
+    font-size: 28.5px;
+  }
+  
+  .ADD-NEW-MEAL .pork {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 33px;
+    left: 40px;
+  }
+  
+  .ADD-NEW-MEAL .overlap-4 {
+    position: absolute;
+    width: 98px;
+    height: 91px;
+    top: 85px;
+    left: 32px;
+  }
+  
+  .ADD-NEW-MEAL .back-arrow {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 0;
+    left: 23px;
+  }
+  
+  .ADD-NEW-MEAL .back-to-home {
+    position: absolute;
+    width: 90px;
+    top: 66px;
+    left: 0;
+    text-shadow: 0px 2px 4px #29442b40;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 700;
+    color: #29bf12;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .ADD-NEW-MEAL .overlap-5 {
+    position: absolute;
+    width: 407px;
+    height: 51px;
+    top: 132px;
+    left: 968px;
+  }
+  
+  .ADD-NEW-MEAL .save-meal-button {
+    position: absolute;
+    width: 250px;
+    height: 51px;
+    top: 0;
+    left: 157px;
+  }
+  
+  .ADD-NEW-MEAL .overlap-6 {
+    position: relative;
+    width: 248px;
+    height: 51px;
+  }
+  
+  .ADD-NEW-MEAL .complete-button {
+    position: absolute;
+    width: 190px;
+    height: 51px;
+    top: 0;
+    left: 29px;
+    background-color: #08bdbd;
+    border-radius: 21px;
+    box-shadow: 0px 3px 4px #655e4c80;
+  }
+  
+  .ADD-NEW-MEAL .complete-button:hover {
+    background-color: #ff9914;
+  }
+  
+  .ADD-NEW-MEAL .complete-button-2:hover {
+    background-color: #ff9914;
+  }
+  
+  .ADD-NEW-MEAL .meal-name {
+    width: 248px;
+    position: absolute;
+    top: 7px;
+    user-select: none; 
+    pointer-events: none;
+    left: 0;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 700;
+    color: #f3f3f1;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .ADD-NEW-MEAL .overlap-wrapper {
+    position: absolute;
+    width: 188px;
+    height: 51px;
+    top: 0;
+    left: 0;
+  }
+  
+  .ADD-NEW-MEAL .overlap-7 {
+    position: relative;
+    width: 186px;
+    height: 51px;
+  }
+  
+  .ADD-NEW-MEAL .complete-button-2 {
+    position: absolute;
+    width: 142px;
+    height: 51px;
+    top: 0;
+    left: 22px;
+    background-color: #08bdbd;
+    border-radius: 21px;
+    box-shadow: 0px 3px 4px #655e4c80;
+  }
+  
+  .ADD-NEW-MEAL .meal-name-2 {
+    width: 186px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    user-select: none; /* Prevent text selection */
+    pointer-events: none;
+    font-family: "Lexend Deca", Helvetica;
+    font-weight: 700;
+    color: #f3f3f1;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .ingredient-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .ingredient-list .text-wrapper {
+    width: 50px; /* Adjust width as needed */
+    text-align: center;
+    margin-right: 10px; /* Adjust spacing */
+  }
+  
+  .ingredient-list .text-wrapper-2 {
+    flex: 1; /* Take up remaining space */
+    margin-right: 10px; /* Adjust spacing */
+  }
+  
+  .ingredient-list .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Adjust spacing */
+  }
+  
+  .ingredient-list .quantity-wrapper .img,
+  .ingredient-list .quantity-wrapper .pluss-symbol-3 {
+    width: 25px; /* Adjust size */
+    cursor: pointer; /* Show pointer cursor */
+  }
+  
+  .ingredient-list .quantity-wrapper .text-wrapper-3 {
+    width: 50px; /* Adjust width */
+    text-align: center;
+    margin: 0 5px; /* Adjust spacing */
+  }
+  
+  .ingredient-list .text-wrapper-4 {
+    width: 60px; /* Adjust width */
+    margin-right: 10px; /* Adjust spacing */
+  }
+  
+  #ingredient-container{
+    position: relative;
+    top: 270px;
+    left: 190px;
+    
+  }
+  
+  
+  
+  .ingredient-name{
+  
+    /* pork adobo cut */
+  
+  width: 600px;
+  height: 38px;
+  left: 190px;
+  top: 256px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 38px */
+  
+  color:  #ff9914;
+  
+  
+  background-color: transparent; /* Make the input background transparent */
+  border: none; /* Remove borders */
+  outline: none; /* Remove focus outline */
+  padding: 0; /* Remove default padding */
+  
+  
+  }
+  
+  .quantity-ingredient{
+    /* 10 */
+  
+  width: 137px;
+  height: 38px;
+  left: 900px;
+  top: 0px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 38px */
+  text-align: center;
+  
+  color: #ACA89E;
+  
+  
+  background-color: transparent; /* Make the input background transparent */
+  border: none; /* Remove borders */
+  outline: none; /* Remove focus outline */
+  padding: 0; /* Remove default padding */
+  
+  }
+  
+  .unit-ingredient{
+    /* kg */
+  
+  width: 200px;
+  height: 38px;
+  left: 1000px;
+  top: 256.06px;
+  bottom: 10px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 38px */
+  text-align: center;
+  
+  color: #ACA89E;
+  
+  
+  background-color: transparent; /* Make the input background transparent */
+  border: none; /* Remove borders */
+  outline: none; /* Remove focus outline */
+  padding: 10; /* Remove default padding */
+  
+  
+  
+  
+  }
+  
+  .remove-item{
+  /* Positioning and sizing */
+  width: 71px;
+  height: 38px;
+  left: 1150px;
+  top: 256px;
+  
+  /* Font styling */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  /* identical to box height, or 38px */
+  text-align: center;
+  text-decoration-line: underline;
+  
+  /* Color */
+  color: #F21B3F;
+  
+  background-color: transparent; /* Make the input background transparent */
+  border: none; /* Remove borders */
+  outline: none; /* Remove focus outline */
+  padding: 0; /* Remove default padding */
+  }
+  
+  .list-item{
+    height: 45px;
+    border-bottom: 2px solid #ACA89E;;
+  }

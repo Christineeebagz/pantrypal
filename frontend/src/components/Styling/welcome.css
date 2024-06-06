@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("fonts/LexendDeca.ttf");
+}
+#welcome-body {
+  background: linear-gradient(119deg, #08bdbd 45.53%, #045757 129.83%);
+  /* margin-left: 0px;
+  margin-top: 0px; */
+}
+
+.maincontainer-body  {
+  display: inline-flex;
+  width: 1420px;
+  height: 780px;
+  background-image: url(graphics/welcome_scatteredfood.png);
+}
+
+.message {
+  position: absolute;
+  width: 550px;
+  height: 106px;
+  left: 249px;
+  top: 294px;
+
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+
+  color: #3b2304;
+
+  text-shadow: 0px 4px 3px rgba(41, 68, 43, 0.25);
+}
+
+.getstartedbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  position: absolute;
+  width: 550px;
+  height: 104px;
+  left: 245px;
+  top: 437px;
+
+  background: #ff9914;
+  box-shadow: 0px 2px 4px rgba(102, 95, 76, 0.5),
+    inset -1px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 66px;
+  text-align: center;
+  letter-spacing: 0.2em;
+
+  color: #f3f3f1;
+
+  mix-blend-mode: normal;
+}

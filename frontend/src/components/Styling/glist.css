@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca.ttf");
+  }
+
+#grocerylist {
+    position: absolute;
+    width: 1130px;
+    height: 492px;
+    /* width: 1260px; */
+    /* height: 492px; */
+
+    left: 50px;
+    top: 39px;
+    
+  
+    background: #eaeaea;
+    border-radius: 35px;
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.25%;
+    overflow: auto;
+ 
+    padding-left: 180px;
+    padding-top: 225px;
+    padding-bottom: 50px;
+  }
+  
+  #glistlabel {
+    position: absolute;
+    width: 550px;
+    height: 116px;
+    left: 175px;
+    top: 30px;
+  
+    background: #ff9914;
+    box-shadow: 0px 0px 5px 3px rgba(102, 95, 76, 0.5);
+    border-radius: 35px;
+  }
+  
+  #viewlabel {
+    position: absolute;
+    width: 248px;
+    height: 38px;
+    left: 116px;
+    top: 39px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+  
+    color: #f3f3f1;
+  }
+  
+  #glistlabel img {
+    /* grocery list icon  */
+  
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 40px;
+    top: 33px;
+  
+    filter: brightness(160%);
+  }
+  
+  #printbutton {
+    position: absolute;
+    width: 190px;
+    height: 51px;
+    left: 1021px;
+    top: 66px;
+  
+    background: #08bdbd;
+    box-shadow: 0px 3px 4px rgba(102, 95, 76, 0.5);
+    border-radius: 21px;
+    border: 0px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+  
+    color: #f3f3f1;
+  }
+  
+  #backtochoosebutton {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 49px;
+    top: 40px;
+  
+    background: url(.png);
+  }
+  
+  #backtochooselabel {
+    position: absolute;
+    width: 59px;
+    height: 25px;
+    left: 50px;
+    top: 110px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+  
+    color: #29bf12;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  .row {
+    order: 0;
+    width: 1025px;
+    height: 50px;
+    left: 175px;
+    top: 160px;
+    border-bottom: 2px solid #aca89e;
+  
+    display: flex;
+    align-content: flex-start;
+    padding-top: 10px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    text-align: center;
+  
+    color: #aca89e;
+  }
+  
+  #header {
+    font-size: 30px;
+    padding-top: 0px;
+  }
+  
+  .column1 {
+    left: 0px;
+    width: 75px;
+  }
+  
+  .column2 {
+    color: #ff9914;
+    width: 596px;
+    text-align: left;
+  }
+  
+  .column3 {
+    width: 211px;
+  }
+  
+  .column4 {
+    width: 153px;
+  }

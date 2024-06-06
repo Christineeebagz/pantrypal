@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import Validation from "./Verification/SignupValidation";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import "./Styling/Signup.css";
-
-//MAKE AN ACCOUNT
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -15,103 +14,145 @@ const Signup = () => {
     password: "",
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
+
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInput = (event) => {
     setValues((prev) => ({
       ...prev,
-      [event.target.name]: [event.target.value],
+      [event.target.name]: event.target.value,
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setErrors(Validation(values));
-    console.log("passed here " + values.username);
-    if (
-      errors.username === "" &&
-      errors.firstName === "" &&
-      errors.lastName === "" &&
-      errors.email === "" &&
-      errors.password === ""
-    ) {
+    setIsSubmitting(true);
+    const validationErrors = await Validation(values);
+    setErrors(validationErrors);
+
+    if (Object.values(validationErrors).every((err) => err === "")) {
       axios
         .post("http://localhost:8070/signup", values)
         .then((res) => {
-          console.log("done getting");
           navigate("/home", { state: { user: values } });
         })
         .catch((err) => console.log(err));
     }
-    console.log("errors: " + errors.username);
+    setIsSubmitting(false);
   };
 
   return (
-    <div>
-      <form action="" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
+    <div className="background-container">
+      <Helmet>
+        <title>PantryPal - Sign Up</title>
+        <link rel="icon" href="graphics/diet.png" type="image/x-icon" />
+        <link rel="stylesheet" href="signup.css" />
+      </Helmet>
+      <a href="/" className="PantryPalName">
+        PantryPal.
+      </a>
+      <Link to="/signin" className="signinbutton">
+        Sign in
+      </Link>
+
+      <div className="signupbox">
+        <div className="signup">sign up</div>
+        <form onSubmit={handleSubmit}>
+          <div className="inputlabel" id="lfname">
+            first name
+          </div>
           <input
             type="text"
-            placeholder="Enter Username"
-            onChange={handleInput}
-            name="username"
-          />
-          {errors.username && (
-            <span className="text-danger">{errors.username}</span>
-          )}
-        </div>
-        <div>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            type="text"
-            placeholder="Enter First Name"
-            onChange={handleInput}
+            className="inputfield"
+            id="infname"
             name="firstName"
+            value={values.firstName}
+            onChange={handleInput}
           />
           {errors.firstName && (
-            <span className="text-danger">{errors.firstName}</span>
+            <span id="error-fname" className="text-danger">
+              {errors.firstName}
+            </span>
           )}
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name</label>
+
+          <div className="inputlabel" id="llname">
+            last name
+          </div>
           <input
             type="text"
-            placeholder="Enter Last Name"
-            onChange={handleInput}
+            className="inputfield"
+            id="inlname"
             name="lastName"
+            value={values.lastName}
+            onChange={handleInput}
           />
           {errors.lastName && (
-            <span className="text-danger">{errors.lastName}</span>
+            <span id="error-lname" className="text-danger">
+              {errors.lastName}
+            </span>
           )}
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
+
+          <div className="inputlabel" id="luname">
+            username
+          </div>
+          <input
+            type="text"
+            className="inputfield"
+            id="inuname"
+            name="username"
+            value={values.username}
+            onChange={handleInput}
+          />
+          {errors.username && (
+            <span id="error-uname" className="text-danger">
+              {errors.username}
+            </span>
+          )}
+
+          <div className="inputlabel" id="lemail">
+            email address
+          </div>
           <input
             type="email"
-            placeholder="Enter Email"
-            onChange={handleInput}
+            className="inputfield"
+            id="inemail"
             name="email"
+            value={values.email}
+            onChange={handleInput}
           />
-          {errors.email && <span className="text-danger">{errors.email}</span>}
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
+          {errors.email && (
+            <span id="error-email" className="text-danger">
+              {errors.email}
+            </span>
+          )}
+
+          <div className="inputlabel" id="lpassword">
+            password
+          </div>
           <input
             type="password"
-            placeholder="Enter Password"
-            onChange={handleInput}
+            className="inputfield"
+            id="inpassword"
             name="password"
+            value={values.password}
+            onChange={handleInput}
           />
           {errors.password && (
-            <span className="text-danger">{errors.password}</span>
+            <span id="error-password" className="text-danger">
+              {errors.password}
+            </span>
           )}
-        </div>
-        <button onClick={handleSubmit} type="submit">
-          <strong>Sign in</strong>
-        </button>
-      </form>
+
+          <button id="complete" type="submit" disabled={isSubmitting}>
+            complete
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

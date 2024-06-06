@@ -1,10 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 import "./Styling/choosemeals.css";
 import "./Styling/navbar.css";
 import backArrow from "./Styling/graphics/meals_back-arrow.png";
+import logo from "./Styling/graphics/logo.png";
 
-const NavBar = () => {
+const NavBar = ({ values }) => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/home", { state: { user: values } });
+  };
+
+  const goToWelcome = () => {
+    navigate("/");
+  };
+
   return (
     <div className="navbar">
       <Helmet>
@@ -13,21 +24,23 @@ const NavBar = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>PantryPal - Create A List</title>
+
         <link
           rel="icon"
-          href="./Styling/graphics/logo.png"
+          //   href="./Styling/graphics/logo.png"
+          src={logo}
           type="image/x-icon"
         />
       </Helmet>
-      <div className="navbar-container">
-        <a href="welcome.html" className="PantryPalName">
-          PantryPal.
+      <div className="navbar-container-solo">
+        <a className="PantryPalName">PantryPal.</a>
+        <button onClick={goToWelcome} className="signout">
+          Sign Out
+        </button>
+        <a>
+          <img src={backArrow} onClick={goToHome} className="backbutton" />
         </a>
-        <button className="signout">Sign Out</button>
-        <a href="home.html">
-          <img src={backArrow} className="backbutton" />
-        </a>
-        <div className="backtohome">home</div>
+        <div className="backhomelabel">home</div>
       </div>
     </div>
   );
