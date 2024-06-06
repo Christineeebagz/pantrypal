@@ -5,11 +5,14 @@
 
 #grocerylist {
     position: absolute;
-    width: 1260px;
+    width: 1130px;
+    height: 492px;
+    /* width: 1260px; */
     /* height: 492px; */
 
     left: 50px;
     top: 39px;
+    
   
     background: #eaeaea;
     border-radius: 35px;
@@ -20,7 +23,7 @@
     align-content: flex-start;
     gap: 0.25%;
     overflow: auto;
-  
+ 
     padding-left: 180px;
     padding-top: 225px;
     padding-bottom: 50px;

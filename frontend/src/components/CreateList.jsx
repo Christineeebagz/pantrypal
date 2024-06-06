@@ -11,11 +11,16 @@ const CreateList = () => {
   const { user } = location.state || {};
   const [meals, setMeals] = useState([]);
   const [selectedMeals, setSelectedMeals] = useState([]);
+  const [readyQuantity, setReadyQuantity] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on component mount
+  }, []);
 
   useEffect(() => {
     if (user?.id_no) {
       axios
-        .get(`http://localhost:8070/getmeals?id_no=${user.id_no}`)
+        .get(`http://localhost:8070/getmealslist?id_no=${user.id_no}`)
         .then((response) => {
           console.log("Fetched meals:", response.data);
           setMeals(response.data);
@@ -36,31 +41,35 @@ const CreateList = () => {
           (selectedMeal) => selectedMeal.meal_id !== meal.meal_id
         )
       );
+      setReadyQuantity(
+        readyQuantity.filter((readyMeal) => readyMeal.meal_id !== meal.meal_id)
+      );
     } else {
       setSelectedMeals([...selectedMeals, { ...meal, quantity: 1 }]);
+      setReadyQuantity([...readyQuantity, { ...meal, quantity: 1 }]);
     }
-    console.log("Selected meals:", selectedMeals);
   };
 
-  // const updateQuantity = (meal_id, quantity) => {
-  //   setSelectedMeals((prevSelectedMeals) =>
-  //     prevSelectedMeals.map((meal) =>
-  //       meal.meal_id === meal_id
-  //         ? { ...meal, quantity: parseInt(quantity, 10) }
-  //         : meal
-  //     )
-  //   );
-  //   // console.log("Updated selected meals:", selectedMeals);
-  // };
-  const updateQuantity = (meal_id, quantity) => {
-    setSelectedMeals((prevSelectedMeals) =>
-      prevSelectedMeals.map((meal) =>
-        meal.meal_id === meal_id
-          ? { ...meal, quantity: parseInt(quantity, 10) }
+  const updateQuantity = (meal_name, quantity) => {
+    const parsedQuantity = parseInt(quantity, 10);
+
+    // Update readyQuantity state
+    setReadyQuantity((prevReadyQuantity) =>
+      prevReadyQuantity.map((meal) =>
+        meal.meal_name === meal_name
+          ? { ...meal, quantity: parsedQuantity }
           : meal
       )
     );
-    console.log("Updated selected meals:", selectedMeals); // Add this line
+
+    // Update selectedMeals state
+    setSelectedMeals((prevSelectedMeals) =>
+      prevSelectedMeals.map((meal) =>
+        meal.meal_name === meal_name
+          ? { ...meal, quantity: parsedQuantity }
+          : meal
+      )
+    );
   };
 
   const handleSubmit = () => {
@@ -90,6 +99,8 @@ const CreateList = () => {
         state: { id_no: user?.id_no, selectedMeals },
       });
     }
+
+    console.log("Updated selected meals:", selectedMeals); // Moved outside the if-else block
   };
 
   const handleSelected = (event) => {
@@ -109,7 +120,7 @@ const CreateList = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-create-list">
       <Helmet>
         <meta charSet="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -118,44 +129,29 @@ const CreateList = () => {
         <link rel="icon" href="graphics/logo.png" type="image/x-icon" />
       </Helmet>
 
-      <NavBar />
+      <NavBar values={user} />
 
-      <div id="maincontainer">
-        <div className="label">
-          <div className="mealslabel">Choose your meals</div>
-          <button id="viewlist" onClick={handleSubmit}>
+      <div id="maincontainer-create-list">
+        <div className="label-createlist ">
+          <div className="mealslabel-createlist">Choose your meals</div>
+          <button id="viewlist-createlist" onClick={handleSubmit}>
             View Grocery List
           </button>
         </div>
         <div onClick={handleSelected}>
           {meals.map((meal) => (
             <div key={meal.meal_id} className="meal" data-mealid={meal.meal_id}>
-              {/* <input
-                  type="number"
-                  min="1"
-                  className="mealquantity"
-                  value={
-                    selectedMeals.find((m) => m.meal_id === meal.meal_id)
-                      ?.quantity || ""
-                  }
-                  onChange={(e) => updateQuantity(meal.meal_id, e.target.value)}
-                /> */}
               <input
-                key={
-                  selectedMeals.find((m) => m.meal_id === meal.meal_id)
-                    ?.quantity || ""
-                }
                 type="number"
                 min="1"
                 className="mealquantity"
                 value={
-                  selectedMeals.find((m) => m.meal_id === meal.meal_id)
+                  readyQuantity.find((m) => m.meal_name === meal.meal_name)
                     ?.quantity || ""
                 }
-                onChange={(e) => updateQuantity(meal.meal_id, e.target.value)}
+                onChange={(e) => updateQuantity(meal.meal_name, e.target.value)}
                 onClick={(e) => e.stopPropagation()}
               />
-
               <div className="mealname">{meal.meal_name}</div>
             </div>
           ))}

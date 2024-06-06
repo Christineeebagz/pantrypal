@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca.ttf");
+  }
+
+  
+/* body {
+    background-image: url(graphics/signin_bg.png);
+    background-size: 100% auto;;
+    background-repeat: no-repeat;
+  
+} */
+
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(graphics/signin_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+  .PantryPalName {
+    position: absolute;
+    width: 248px;
+    height: 38px;
+    left: 55px;
+    top: 66px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #ff9914;
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+    text-decoration: none;
+  }
+  
+  .PantryPalName:visited {
+    text-decoration: none;
+  }
+  
+  .signupbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    position: absolute;
+    width: 170px;
+    height: 35px;
+    left: 1195px;
+    top: 61px;
+  
+    background: #ff9914;
+    border-radius: 20px;
+    font-family: "Lexend Deca";
+    color: white;
+    text-decoration: none;
+  }
+  
+  .signupbutton:visited {
+    text-decoration: none;
+  }
+  
+  .signinbox {
+    position: absolute;
+    width: 475px;
+    height: 558px;
+    left: 66px;
+    top: 144px;
+  
+    /* background: #F3F3F1; */
+    background-image: url(graphics/signin_gradient.png);
+    background-size: cover;
+    box-shadow: 0px 3px 4px rgba(102, 95, 76, 0.5);
+    border-radius: 64px;
+  }
+  
+  .signin {
+    position: absolute;
+    width: 142px;
+    height: 50px;
+    left: 68px;
+    top: 68px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .usernamelabel {
+    position: absolute;
+    width: 160px;
+    height: 15px;
+    left: 68px;
+    top: 147px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+  
+    color: #665f4c;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  #usernameinput {
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 340px;
+    height: 53px;
+    left: 68px;
+    top: 176px;
+    padding: 20px;
+    background: #f3f3f1;
+    border: 1px solid #08bdbd;
+    border-radius: 64px;
+  }
+  
+  .pswrdlabel {
+    position: absolute;
+    width: 160px;
+    height: 15px;
+    left: 68px;
+    top: 262px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+  
+    color: #665f4c;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  #pswrdinput {
+    box-sizing: border-box;
+    position: absolute;
+    width: 340px;
+    height: 53px;
+    left: 68px;
+    top: 291px;
+  
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    background: #f3f3f1;
+    border: 1px solid #08bdbd;
+    border-radius: 64px;
+  }
+  
+  .forgot {
+    position: absolute;
+    width: 160px;
+    height: 15px;
+    left: 248px;
+    top: 390px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: right;
+    text-decoration-line: underline;
+  
+    color: #08bdbd;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  #signinbutton {
+    position: absolute;
+    width: 190px;
+    height: 51px;
+    left: 68px;
+    top: 372px;
+    border-width: 0px;
+    color: white;
+  
+    font-family: "Lexend Deca";
+    background: #08bdbd;
+    border-radius: 21px;
+  }
+  
+  #signinbutton:hover {
+    background: #ff9914;
+    color: white;
+  }
+  .noaccount {
+    position: absolute;
+    width: 235px;
+    height: 15px;
+    left: 130px;
+    top: 500px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+  
+    color: #665f4c;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+
+  .inputfield {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .inputfield.error {
+    border-color: red;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.875em;
+    top: 145px;
+    left: 250px;
+    display: block;
+  }
+
+  .text-danger {
+    color: red;
+    font-size: 0.875em;
+    top: 145px;
+    left: 250px;
+  }
+  
+  #error-emaill {
+    /* position: absolute;
+    width: 160px;
+    height: 15px; */
+    top: 145px;
+    left: 250px;
+  }
+  
+  #error-passwordd {
+    position: absolute;
+    top: 260px;
+    left: 250px;
+  }

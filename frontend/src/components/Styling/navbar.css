@@ -1,4 +1,8 @@
-.navbar {
+/* .backtohome {
+
+} */
+
+.navbar-container-solo {
 
     display: flex;
     justify-content: space-between;
@@ -10,9 +14,12 @@
     left: 0;
     right: 0;
     z-index: 1000; /* Adjust as needed */
+    background-color: yellow;
 
   }
- 
+ .navbar-container-solo .backbutton {
+  cursor:pointer;
+ }
 
 
 
@@ -36,6 +43,7 @@
   }
 
   .signout {
+    cursor:pointer;
     position: absolute;
     width: 150px;
     height: 25px;

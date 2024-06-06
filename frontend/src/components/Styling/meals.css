@@ -1,0 +1,493 @@
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca.ttf");
+  }
+  
+  .PantryPalName {
+    /* PantryPal. logo */
+  
+    position: absolute;
+    width: 248px;
+    height: 38px;
+    left: 609px;
+    top: 52px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #ff9914;
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+    text-decoration: none;
+  }
+  
+  .signout {
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    left: 1215px;
+    top: 71px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+    text-decoration: none;
+  
+    background-color: transparent;
+    outline: none;
+    color: #08bdbd;
+    border: 0px;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  #maincontainer,
+  #mealviewcontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.25%;
+    overflow: scroll;
+  
+    padding-left: 55px;
+    padding-right: 55px;
+    /* padding-bottom: 55px; */
+  
+    position: absolute;
+    width: 1310px;
+    height: 645px;
+    left: 55px;
+    top: 180px;
+  
+    background: #eaeaea;
+    box-shadow: inset 0px 4px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+  }
+  
+  #maincontainer {
+    display: flex;
+  }
+  
+  .label {
+    width: 99%;
+    height: 200px;
+  }
+  
+  .mealslabel {
+    order: 0;
+    position: absolute;
+    width: 274px;
+    height: 113px;
+    left: 60px;
+    top: 35px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 112px;
+    /* identical to box height */
+  
+    color: #29bf12;
+  
+    text-shadow: 0px 4px 3px rgba(41, 68, 43, 0.25);
+  }
+  
+  #editbutton,
+  #editmealbutton,
+  #canceleditmealbutton,
+  #cancelbutton {
+    position: absolute;
+    width: 142.5px;
+    height: 51px;
+    left: 1067.75px;
+    top: 75px;
+  
+    background: #08bdbd;
+    box-shadow: 0px 3px 4px rgba(102, 95, 76, 0.5);
+    border-radius: 21px;
+    border: 0px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: #f3f3f1;
+  }
+  
+  #editbutton:hover,
+  #editmealbutton:hover,
+  #canceleditmealbutton:hover,
+  #cancelbutton:hover {
+    background: #ff9914;;
+  }
+  #cancelbutton,
+  #canceleditmealbutton {
+    display: none;
+  }
+  
+  #deletebutton:hover,
+  #saveeditedmealbutton:hover {
+    background: #08bdbd;
+  }
+  #deletebutton,
+  #saveeditedmealbutton {
+    position: absolute;
+    width: 142.5px;
+    height: 51px;
+    left: 901.75px;
+    top: 75px;
+  
+    background: #ff9914;
+    box-shadow: 0px 3px 4px rgba(102, 95, 76, 0.5);
+    border-radius: 21px;
+    border: 0px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: #f3f3f1;
+  
+    display: none;
+  }
+  
+  .backbutton {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 55px;
+    top: 52px;
+  }
+  
+  .backhomelabel {
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    left: 48px;
+    top: 114px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+  
+    color: #29bf12;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  
+  .addmeal:hover {
+    background: #ff9914;
+  }
+  
+  .addmeal {
+    width: 364px;
+    height: 116px;
+    margin: 5px;
+    background: #c7c7c7;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 32%;
+    left: 4.25%;
+  }
+  
+  .addmeal img {
+    /* Remove the absolute positioning */
+    width: auto; /* Adjust this as needed */
+    height: auto; /* Adjust this as needed */
+  }
+  
+  .meal {
+    width: 364px;
+    height: 116px;
+    margin: 5px;
+  
+    background: #29bf12;
+    /* box-shadow: 0px 0px 5px 3px rgba(102, 95, 76, 0.5); */
+    border-radius: 35px;
+  }
+  
+  .meal:hover {
+    width: 364px;
+    height: 116px;
+    margin: 5px;
+  
+    background: #1b7a0c;
+    /* box-shadow: 0px 0px 5px 3px rgba(102, 95, 76, 0.5); */
+    border-radius: 35px;
+  }
+  .mealicon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 33px;
+  }
+  
+  .mealname {
+    overflow: overlay;
+    position: relative;
+    width: 250px;
+    height: 38px;
+    left: 85px;
+    top: -15px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+  
+    color: #f3f3f1;
+  }
+  
+  .deleteSelect {
+    position: relative;
+    left: 25px;
+    top: 30px; /* Adjust the vertical alignment of the indicator */
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ccc; /* Border color of the indicator */
+    border-radius: 10px; /* Make the indicator round */
+    background-color: #fff;
+  }
+  
+  #viewmeallabel input{
+    display:flex;
+    color: #fff;
+  }
+  #mealviewcontainer {
+    display: none;
+    padding-left: 180px;
+    padding-top: 225px;
+    padding-bottom: 35px;
+  }
+  
+  input, select{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #aca89e;
+    font-family: "Lexend Deca";
+  }
+  
+  .meal-name-input{
+    background-color: transparent;
+    font-family: "Lexend Deca";
+    font-style: normal;
+    border: none; 
+    outline: none; 
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #aca89e;
+  }
+  
+  .ingredient-name-input {
+    background-color: transparent;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #ff9914;
+    text-align: left;
+    width: 596px;
+  }
+  
+  .ingredient-quantity-input {
+    background-color: transparent;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #aca89e;
+    text-align: center;
+    width: 190px;
+  }
+  
+  .ingredient-unit-select {
+    background-color: transparent;
+    border-color: transparent;
+    border: none;
+    outline: none; 
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: #aca89e;
+    width: 185px;
+    text-align:center;
+  }
+  
+  #viewmeallabel {
+    position: absolute;
+    width: 550px;
+    height: 116px;
+    left: 175px;
+    top: 30px;
+  
+    background: #29bf12;
+    box-shadow: 0px 0px 5px 3px rgba(102, 95, 76, 0.5);
+    border-radius: 35px;
+  }
+  
+  #viewmeallabel img {
+    /* grocery list icon  */
+  
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 40px;
+    top: 33px;
+  
+    filter: brightness(160%);
+  }
+  
+  #viewmealname {
+    position: absolute;
+    width: 248px;
+    height: 38px;
+    left: 116px;
+    top: 39px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #f3f3f1;
+  }
+  
+  .row {
+    order: 0;
+    width: 1025px;
+    height: 50px;
+    left: 175px;
+    top: 160px;
+    border-bottom: 2px solid #aca89e;
+  
+    display: flex;
+    align-content: flex-start;
+    padding-top: 10px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    text-align: center;
+  
+    color: #aca89e;
+  }
+  
+  #header {
+    font-size: 30px;
+    padding-top: 0px;
+  }
+  
+  .blank{
+    left: 0px;
+    width: 33px; 
+  }
+  .column1 {
+    left: 0px;
+    width: 33px;
+  }
+  
+  .column11{
+    width: 32px;
+  }
+  
+  .column2 {
+    color: #ff9914;
+    width: 596px;
+    text-align: left;
+  }
+  
+  .column2::placeholder{
+    color:#aca89e;
+    width: 596px;
+    text-align: left;
+  }
+  
+  .column3::placeholder{
+    color:#aca89e;
+  }
+  
+  .column3 {
+    width: 190px;
+    text-align:center;
+  }
+  
+  .column4 {
+    width: 190px;
+  }
+  
+  
+  #backtochoosebutton, #newingredient{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 49px;
+    top: 40px;
+  }
+  
+  #backtochooselabel,
+  #newingredientlabel {
+    position: absolute;
+    width: 59px;
+    height: 25px;
+    left: 50px;
+    top: 110px;
+  
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: right;
+  
+    color: #29bf12;
+  
+    text-shadow: 0px 2px 4px rgba(41, 68, 43, 0.25);
+  }
+  
+  #newingredient {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 225px;
+    left: 62px;
+  }
+  
+  #newingredientlabel{
+    top: 275px;
+    left: 57px;
+    text-align: center;
+  }
+  
+  #addingredient{
+    display: none;
+  }
+  
